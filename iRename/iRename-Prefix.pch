@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'iRename' target in the 'iRename' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
