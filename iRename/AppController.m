@@ -184,10 +184,34 @@
                                       otherButton:nil 
                         informativeTextWithFormat:[errs getErrorStrings]];
                 }
- 
-            if (alert != nil) {
-                [alert beginSheetModalForWindow:pW modalDelegate:nil didEndSelector:nil contextInfo:nil];
+            } else {
+                // Create the string with the link
+                NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:@"Love this app? Click here to donate."];
+                NSRange r = NSMakeRange(0, [str length]);
+                [str beginEditing];
+                [str addAttribute:NSLinkAttributeName 
+                            value:[[NSURL alloc] 
+                                   initWithString:@"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KXEWMR85MKGF4"] 
+                            range:r];
+                [str addAttribute:NSForegroundColorAttributeName value:[NSColor blueColor] range:r];
+                [str addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSSingleUnderlineStyle] range:r];
+                [str addAttribute:NSFontAttributeName value:[NSFont systemFontOfSize:[NSFont systemFontSize]] range:r];
+                [str endEditing];
+                
+                // Create the accessory view
+                NSTextView *accessory = [[NSTextView alloc] initWithFrame:NSMakeRect(0, 0, 300, 15)];
+                [accessory insertText:str];
+                [accessory setEditable:NO];
+                [accessory setDrawsBackground:NO];
+                
+                alert = [[NSAlert alloc] init];
+                [alert addButtonWithTitle:@"OK"];
+                [alert setMessageText:@"Renaming finished"];
+                [alert setAccessoryView:accessory];
+                [alert setAlertStyle:NSInformationalAlertStyle];
             }
+            
+            [alert beginSheetModalForWindow:pW modalDelegate:nil didEndSelector:nil contextInfo:nil];
         }];
     }];
 }
