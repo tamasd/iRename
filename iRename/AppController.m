@@ -138,6 +138,7 @@
     [self startIndeterminateProgress];
     
     __block NSFileManager *fm = [NSFileManager defaultManager];
+    __unsafe_unretained __block NSWindow *pW = parentWindow;
     __weak __block ErrorAggregator *errs = errors;
     __weak __block NSOperationQueue *rQ = renameQueue;
     __weak __block AppController *ac = self;
@@ -172,16 +173,20 @@
         [rQ waitUntilAllOperationsAreFinished];
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [ac stopProgress];
+            NSAlert *alert = nil;
             if ([errs hasErrors]) {
                 if ([errs numberOfErrors] == 1) {
-                    [NSAlert alertWithError:[[errs getErrors] objectAtIndex:0]];
+                    alert = [NSAlert alertWithError:[[errs getErrors] objectAtIndex:0]];
                 } else {
-                    [NSAlert alertWithMessageText:@"Multiple errors occoured." 
+                    alert = [NSAlert alertWithMessageText:@"Multiple errors occoured." 
                                     defaultButton:@"OK" 
                                   alternateButton:nil 
                                       otherButton:nil 
                         informativeTextWithFormat:[errs getErrorStrings]];
                 }
+ 
+            if (alert != nil) {
+                [alert beginSheetModalForWindow:pW modalDelegate:nil didEndSelector:nil contextInfo:nil];
             }
         }];
     }];
