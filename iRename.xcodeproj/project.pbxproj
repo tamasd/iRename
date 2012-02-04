@@ -21,12 +21,12 @@
 		91CE7A6414CDF61F00EF6661 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		91CE7A6514CDF61F00EF6661 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		91CE7A6614CDF61F00EF6661 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		91CE7A6914CDF61F00EF6661 /* iRename-Info.plist */ = {isa = PBXFileReference; path = "iRename-Info.plist"; sourceTree = "<group>"; };
+		91CE7A6914CDF61F00EF6661 /* iRename-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iRename-Info.plist"; sourceTree = "<group>"; };
 		91CE7A6B14CDF61F00EF6661 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		91CE7A6D14CDF61F00EF6661 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		91CE7A6F14CDF61F00EF6661 /* iRename-Prefix.pch */ = {isa = PBXFileReference; path = "iRename-Prefix.pch"; sourceTree = "<group>"; };
+		91CE7A6F14CDF61F00EF6661 /* iRename-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iRename-Prefix.pch"; sourceTree = "<group>"; };
 		91CE7A7114CDF61F00EF6661 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		91CE7A7314CDF62000EF6661 /* iRenameAppDelegate.h */ = {isa = PBXFileReference; path = iRenameAppDelegate.h; sourceTree = "<group>"; };
+		91CE7A7314CDF62000EF6661 /* iRenameAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iRenameAppDelegate.h; sourceTree = "<group>"; };
 		91CE7A7414CDF62000EF6661 /* iRenameAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iRenameAppDelegate.m; sourceTree = "<group>"; };
 		91CE7A7714CDF62000EF6661 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
