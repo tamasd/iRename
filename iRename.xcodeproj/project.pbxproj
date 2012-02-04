@@ -7,15 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		913007CE14D497030096658F /* ErrorAggregator.m in Sources */ = {isa = PBXBuildFile; fileRef = 913007CD14D497030096658F /* ErrorAggregator.m */; };
+		913007D214D5734D0096658F /* RegexReplace.m in Sources */ = {isa = PBXBuildFile; fileRef = 913007D114D5734D0096658F /* RegexReplace.m */; };
+		913007D414D5735C0096658F /* RegexReplace.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913007D314D5735C0096658F /* RegexReplace.xib */; };
+		913007D514D5741E0096658F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CE7A6614CDF61F00EF6661 /* Foundation.framework */; };
+		913B69B014CF5C0C00B6BA58 /* FileRename.m in Sources */ = {isa = PBXBuildFile; fileRef = 913B69AF14CF5C0C00B6BA58 /* FileRename.m */; };
+		91668C4014D0BAD2008CF204 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91668C3F14D0BAD2008CF204 /* AppController.m */; };
 		91CE7A6214CDF61F00EF6661 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CE7A6114CDF61F00EF6661 /* Cocoa.framework */; };
 		91CE7A6C14CDF61F00EF6661 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91CE7A6A14CDF61F00EF6661 /* InfoPlist.strings */; };
 		91CE7A6E14CDF61F00EF6661 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CE7A6D14CDF61F00EF6661 /* main.m */; };
-		91CE7A7214CDF61F00EF6661 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 91CE7A7014CDF61F00EF6661 /* Credits.rtf */; };
 		91CE7A7514CDF62000EF6661 /* iRenameAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CE7A7414CDF62000EF6661 /* iRenameAppDelegate.m */; };
 		91CE7A7814CDF62000EF6661 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91CE7A7614CDF62000EF6661 /* MainMenu.xib */; };
+		91D8BA4614D8A0D20073F6BF /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 91D8BA4514D8A0D20073F6BF /* LICENSE.txt */; };
+		91DEC0D914D466FB00C845D3 /* RenameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DEC0D714D466FB00C845D3 /* RenameViewController.m */; };
+		91DEC0DA14D466FB00C845D3 /* RenameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91DEC0D814D466FB00C845D3 /* RenameViewController.xib */; };
+		91DEC0DE14D46ABC00C845D3 /* Replace.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DEC0DD14D46ABC00C845D3 /* Replace.m */; };
+		91DEC0E014D46B2700C845D3 /* Replace.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91DEC0DF14D46B2700C845D3 /* Replace.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		913007CC14D497030096658F /* ErrorAggregator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorAggregator.h; sourceTree = "<group>"; };
+		913007CD14D497030096658F /* ErrorAggregator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorAggregator.m; sourceTree = "<group>"; };
+		913007D014D5734D0096658F /* RegexReplace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexReplace.h; sourceTree = "<group>"; };
+		913007D114D5734D0096658F /* RegexReplace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexReplace.m; sourceTree = "<group>"; };
+		913007D314D5735C0096658F /* RegexReplace.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegexReplace.xib; sourceTree = "<group>"; };
+		913B69AE14CF5C0C00B6BA58 /* FileRename.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileRename.h; sourceTree = "<group>"; };
+		913B69AF14CF5C0C00B6BA58 /* FileRename.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileRename.m; sourceTree = "<group>"; };
+		91668C3E14D0BAD2008CF204 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		91668C3F14D0BAD2008CF204 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		91CE7A5D14CDF61F00EF6661 /* iRename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CE7A6114CDF61F00EF6661 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		91CE7A6414CDF61F00EF6661 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -25,10 +44,16 @@
 		91CE7A6B14CDF61F00EF6661 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		91CE7A6D14CDF61F00EF6661 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		91CE7A6F14CDF61F00EF6661 /* iRename-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iRename-Prefix.pch"; sourceTree = "<group>"; };
-		91CE7A7114CDF61F00EF6661 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		91CE7A7314CDF62000EF6661 /* iRenameAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iRenameAppDelegate.h; sourceTree = "<group>"; };
 		91CE7A7414CDF62000EF6661 /* iRenameAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iRenameAppDelegate.m; sourceTree = "<group>"; };
 		91CE7A7714CDF62000EF6661 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		91D8BA4514D8A0D20073F6BF /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		91DEC0D614D466FB00C845D3 /* RenameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenameViewController.h; sourceTree = "<group>"; };
+		91DEC0D714D466FB00C845D3 /* RenameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameViewController.m; sourceTree = "<group>"; };
+		91DEC0D814D466FB00C845D3 /* RenameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RenameViewController.xib; sourceTree = "<group>"; };
+		91DEC0DC14D46ABC00C845D3 /* Replace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Replace.h; sourceTree = "<group>"; };
+		91DEC0DD14D46ABC00C845D3 /* Replace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Replace.m; sourceTree = "<group>"; };
+		91DEC0DF14D46B2700C845D3 /* Replace.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Replace.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913007D514D5741E0096658F /* Foundation.framework in Frameworks */,
 				91CE7A6214CDF61F00EF6661 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +69,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		913007CA14D496E90096658F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				913007CC14D497030096658F /* ErrorAggregator.h */,
+				913007CD14D497030096658F /* ErrorAggregator.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		913007CF14D5730E0096658F /* RegexReplace */ = {
+			isa = PBXGroup;
+			children = (
+				913007D014D5734D0096658F /* RegexReplace.h */,
+				913007D114D5734D0096658F /* RegexReplace.m */,
+				913007D314D5735C0096658F /* RegexReplace.xib */,
+			);
+			name = RegexReplace;
+			sourceTree = "<group>";
+		};
 		91CE7A5214CDF61F00EF6661 = {
 			isa = PBXGroup;
 			children = (
@@ -82,9 +127,11 @@
 		91CE7A6714CDF61F00EF6661 /* iRename */ = {
 			isa = PBXGroup;
 			children = (
-				91CE7A7314CDF62000EF6661 /* iRenameAppDelegate.h */,
-				91CE7A7414CDF62000EF6661 /* iRenameAppDelegate.m */,
-				91CE7A7614CDF62000EF6661 /* MainMenu.xib */,
+				913007CA14D496E90096658F /* Helpers */,
+				91DEC0D514D466CA00C845D3 /* Rename */,
+				913B69AE14CF5C0C00B6BA58 /* FileRename.h */,
+				913B69AF14CF5C0C00B6BA58 /* FileRename.m */,
+				91DEC0D314D4668D00C845D3 /* MainApp */,
 				91CE7A6814CDF61F00EF6661 /* Supporting Files */,
 			);
 			path = iRename;
@@ -97,9 +144,43 @@
 				91CE7A6A14CDF61F00EF6661 /* InfoPlist.strings */,
 				91CE7A6D14CDF61F00EF6661 /* main.m */,
 				91CE7A6F14CDF61F00EF6661 /* iRename-Prefix.pch */,
-				91CE7A7014CDF61F00EF6661 /* Credits.rtf */,
+				91D8BA4514D8A0D20073F6BF /* LICENSE.txt */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		91DEC0D314D4668D00C845D3 /* MainApp */ = {
+			isa = PBXGroup;
+			children = (
+				91CE7A7314CDF62000EF6661 /* iRenameAppDelegate.h */,
+				91668C3E14D0BAD2008CF204 /* AppController.h */,
+				91668C3F14D0BAD2008CF204 /* AppController.m */,
+				91CE7A7414CDF62000EF6661 /* iRenameAppDelegate.m */,
+				91CE7A7614CDF62000EF6661 /* MainMenu.xib */,
+			);
+			name = MainApp;
+			sourceTree = "<group>";
+		};
+		91DEC0D514D466CA00C845D3 /* Rename */ = {
+			isa = PBXGroup;
+			children = (
+				913007CF14D5730E0096658F /* RegexReplace */,
+				91DEC0DB14D4674100C845D3 /* Replace */,
+				91DEC0D614D466FB00C845D3 /* RenameViewController.h */,
+				91DEC0D714D466FB00C845D3 /* RenameViewController.m */,
+				91DEC0D814D466FB00C845D3 /* RenameViewController.xib */,
+			);
+			name = Rename;
+			sourceTree = "<group>";
+		};
+		91DEC0DB14D4674100C845D3 /* Replace */ = {
+			isa = PBXGroup;
+			children = (
+				91DEC0DC14D46ABC00C845D3 /* Replace.h */,
+				91DEC0DD14D46ABC00C845D3 /* Replace.m */,
+				91DEC0DF14D46B2700C845D3 /* Replace.xib */,
+			);
+			name = Replace;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,8 +234,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				91CE7A6C14CDF61F00EF6661 /* InfoPlist.strings in Resources */,
-				91CE7A7214CDF61F00EF6661 /* Credits.rtf in Resources */,
 				91CE7A7814CDF62000EF6661 /* MainMenu.xib in Resources */,
+				91DEC0DA14D466FB00C845D3 /* RenameViewController.xib in Resources */,
+				91DEC0E014D46B2700C845D3 /* Replace.xib in Resources */,
+				913007D414D5735C0096658F /* RegexReplace.xib in Resources */,
+				91D8BA4614D8A0D20073F6BF /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +251,12 @@
 			files = (
 				91CE7A6E14CDF61F00EF6661 /* main.m in Sources */,
 				91CE7A7514CDF62000EF6661 /* iRenameAppDelegate.m in Sources */,
+				913B69B014CF5C0C00B6BA58 /* FileRename.m in Sources */,
+				91668C4014D0BAD2008CF204 /* AppController.m in Sources */,
+				91DEC0D914D466FB00C845D3 /* RenameViewController.m in Sources */,
+				91DEC0DE14D46ABC00C845D3 /* Replace.m in Sources */,
+				913007CE14D497030096658F /* ErrorAggregator.m in Sources */,
+				913007D214D5734D0096658F /* RegexReplace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,14 +269,6 @@
 				91CE7A6B14CDF61F00EF6661 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		91CE7A7014CDF61F00EF6661 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				91CE7A7114CDF61F00EF6661 /* en */,
-			);
-			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 		91CE7A7614CDF62000EF6661 /* MainMenu.xib */ = {
@@ -288,6 +370,7 @@
 				91CE7A7D14CDF62000EF6661 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

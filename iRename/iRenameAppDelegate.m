@@ -2,8 +2,9 @@
 //  iRenameAppDelegate.m
 //  iRename
 //
-//  Created by Tamas Demeter-Haludka on 1/23/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  This Source Code Form is subject to the terms of the Mozilla Public
+//  License, v. 2.0. If a copy of the MPL was not distributed with this
+//  file, You can obtain one at http://mozilla.org/MPL/2.0/.
 //
 
 #import "iRenameAppDelegate.h"
@@ -14,7 +15,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
 }
 
 @end

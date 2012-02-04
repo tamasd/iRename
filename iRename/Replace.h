@@ -1,5 +1,5 @@
 //
-//  iRenameAppDelegate.h
+//  Replace.h
 //  iRename
 //
 //  This Source Code Form is subject to the terms of the Mozilla Public
@@ -7,10 +7,12 @@
 //  file, You can obtain one at http://mozilla.org/MPL/2.0/.
 //
 
-#import <Cocoa/Cocoa.h>
+#import "RenameViewController.h"
 
-@interface iRenameAppDelegate : NSObject <NSApplicationDelegate>
-
-@property (assign) IBOutlet NSWindow *window;
+@interface Replace : RenameViewController {
+    IBOutlet NSTextField *from;
+    IBOutlet NSTextField *to;
+    IBOutlet NSButton *caseSensitive;
+}
 
 @end
