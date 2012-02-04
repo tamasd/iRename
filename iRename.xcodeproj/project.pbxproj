@@ -13,6 +13,7 @@
 		913007D514D5741E0096658F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CE7A6614CDF61F00EF6661 /* Foundation.framework */; };
 		913B69B014CF5C0C00B6BA58 /* FileRename.m in Sources */ = {isa = PBXBuildFile; fileRef = 913B69AF14CF5C0C00B6BA58 /* FileRename.m */; };
 		91668C4014D0BAD2008CF204 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91668C3F14D0BAD2008CF204 /* AppController.m */; };
+		91A6C0DE14DDE5C90026817D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 91A6C0DD14DDE5C90026817D /* README.md */; };
 		91CE7A6214CDF61F00EF6661 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CE7A6114CDF61F00EF6661 /* Cocoa.framework */; };
 		91CE7A6C14CDF61F00EF6661 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91CE7A6A14CDF61F00EF6661 /* InfoPlist.strings */; };
 		91CE7A6E14CDF61F00EF6661 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CE7A6D14CDF61F00EF6661 /* main.m */; };
@@ -36,6 +37,7 @@
 		913B69AF14CF5C0C00B6BA58 /* FileRename.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileRename.m; sourceTree = "<group>"; };
 		91668C3E14D0BAD2008CF204 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		91668C3F14D0BAD2008CF204 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		91A6C0DD14DDE5C90026817D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 		91CE7A5D14CDF61F00EF6661 /* iRename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CE7A6114CDF61F00EF6661 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		91CE7A6414CDF61F00EF6661 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -148,6 +150,7 @@
 				91CE7A6D14CDF61F00EF6661 /* main.m */,
 				91CE7A6F14CDF61F00EF6661 /* iRename-Prefix.pch */,
 				91D8BA4514D8A0D20073F6BF /* LICENSE.txt */,
+				91A6C0DD14DDE5C90026817D /* README.md */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				913007D414D5735C0096658F /* RegexReplace.xib in Resources */,
 				91D8BA4614D8A0D20073F6BF /* LICENSE.txt in Resources */,
 				91D8BA4B14D9EF140073F6BF /* iRename.icns in Resources */,
+				91A6C0DE14DDE5C90026817D /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
