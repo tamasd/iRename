@@ -17,4 +17,14 @@
 {
 }
 
+- (IBAction)aboutPanel:(id)sender
+{
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+                             @"", @"Credits",
+                             @"", @"Copyright",
+                             @"", @"Version",
+                             nil];
+    [[NSApplication sharedApplication] orderFrontStandardAboutPanelWithOptions:options];
+}
+
 @end

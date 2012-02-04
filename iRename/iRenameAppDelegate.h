@@ -13,4 +13,6 @@
 
 @property (assign) IBOutlet NSWindow *window;
 
+- (IBAction)aboutPanel:(id)sender;
+
 @end
