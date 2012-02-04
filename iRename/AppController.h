@@ -35,6 +35,8 @@
     NSOperationQueue *renameQueue;
     NSOperationQueue *waitQueue;
     
+    NSUndoManager *undo;
+    
     BOOL transformationWindowOKButtonEnabled;
 }
 

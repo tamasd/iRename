@@ -19,9 +19,16 @@
 - (void)startDeterminateProgress:(NSRange)r;
 - (void)startProgress;
 - (void)stopProgress;
+- (void)removeFiles:(NSArray *)files;
+- (void)addFiles:(NSArray *)files;
+- (void)changeKeyPath:(NSString *)keyPath ofObject:(id)obj toValue:(id)newValue;
+- (void)stopObserving:(NSArray *)files;
+- (void)startObserving:(NSArray *)files;
 @end
 
 @implementation AppController
+
+static void *iRenameKVOContext;
 
 @synthesize transformationWindowOKButtonEnabled;
 
@@ -43,6 +50,16 @@
         [self setTransformationWindowOKButtonEnabled:YES];
     }
     return self;
+}
+
+- (void)awakeFromNib
+{
+    undo = [parentWindow undoManager];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark Actions
@@ -71,6 +88,11 @@
 #ifdef DEBUG
     NSLog(@"Removing data in range %lu-%lu", r.location, r.length);
 #endif
+#ifndef NO_UNDO
+    NSArray *all = [[arrayController arrangedObjects] copy];
+    [undo registerUndoWithTarget:self selector:@selector(addFiles:) object:all];
+#endif
+    [self stopObserving:[arrayController arrangedObjects]];
     NSIndexSet *idx = [NSIndexSet indexSetWithIndexesInRange:r];
     [arrayController removeObjectsAtArrangedObjectIndexes:idx];
 }
@@ -142,6 +164,10 @@
     __weak __block ErrorAggregator *errs = errors;
     __weak __block NSOperationQueue *rQ = renameQueue;
     __weak __block AppController *ac = self;
+    
+#ifndef NO_UNDO
+    [undo removeAllActions];
+#endif
 
     for (__weak __block FileRename *fr in [arrayController arrangedObjects]) {
         NSString *originalPath = [fr originalPath];
@@ -272,7 +298,12 @@
         }
     }
     
-    return add ? [[FileRename alloc] initWithFileName:path] : nil;
+    if (add) {
+        FileRename *fr = [[FileRename alloc] initWithFileName:path];
+        [fr addObserver:self forKeyPath:@"renamedPath" options:NSKeyValueObservingOptionOld context:&iRenameKVOContext];
+        return fr;
+    }
+    return nil;
 }
 
 - (void)addDirectoryRecursiveHelper:(NSURL *)dirURL addDirectories:(BOOL)dir
@@ -302,9 +333,40 @@
     }
     
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        [arrayController addObjects:toAdd];
+        [self addFiles:toAdd];
         [self stopProgress];
     }];
+}
+
+- (void)addFiles:(NSArray *)files
+{
+    [arrayController addObjects:files];
+#ifndef NO_UNDO
+    [undo registerUndoWithTarget:self selector:@selector(removeFiles:) object:files];
+#endif
+}
+
+- (void)removeFiles:(NSArray *)files
+{
+    [arrayController removeObjects:files];
+    [self stopObserving:files];
+#ifndef NO_UNDO
+    [undo registerUndoWithTarget:self selector:@selector(addFiles:) object:files];
+#endif
+}
+
+- (void)startObserving:(NSArray *)files
+{
+    for (FileRename *fr in files) {
+        [fr addObserver:self forKeyPath:@"renamedPath" options:NSKeyValueObservingOptionOld context:&iRenameKVOContext];
+    }
+}
+
+- (void)stopObserving:(NSArray *)files
+{
+    for (FileRename *fr in files) {
+        [fr removeObserver:self forKeyPath:@"renamedPath"];
+    }
 }
 
 - (void)startIndeterminateProgress
@@ -342,6 +404,28 @@
     }
     [progressWindow orderOut:progressWindow];
     [NSApp endSheet:progressWindow];
+}
+
+#pragma mark KVO Observing
+
+- (void)changeKeyPath:(NSString *)keyPath ofObject:(id)obj toValue:(id)newValue
+{
+    [obj setValue:newValue forKeyPath:keyPath];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (context != &iRenameKVOContext) {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    } else {
+        id oldValue = [change objectForKey:NSKeyValueChangeOldKey];
+        
+        if (oldValue == [NSNull null]) {
+            oldValue = nil;
+        }
+        
+        [[undo prepareWithInvocationTarget:self] changeKeyPath:keyPath ofObject:object toValue:oldValue];
+    }
 }
 
 @end
