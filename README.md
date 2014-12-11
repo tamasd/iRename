@@ -3,6 +3,8 @@ iRename
 
 iRename is a batch renaming application for Mac OS X Lion.
 
+The AppStore version is not mine. Download it from the Releases section of this project.
+
 Screenshots
 -----------
 

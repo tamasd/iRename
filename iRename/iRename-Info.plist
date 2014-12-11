@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>iRename.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.github.Yorirou.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.github.tamasd.$(PRODUCT_NAME:rfc1034identifier)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
